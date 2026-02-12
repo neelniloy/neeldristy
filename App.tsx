@@ -8,6 +8,7 @@ import { HeartfeltLetter } from './components/HeartfeltLetter';
 import { FutureVision } from './components/FutureVision';
 import { Closing } from './components/Closing';
 
+
 const App: React.FC = () => {
   const [hasAccepted, setHasAccepted] = useState(false);
   const reasonsRef = useRef<HTMLDivElement>(null);

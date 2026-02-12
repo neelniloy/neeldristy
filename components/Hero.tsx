@@ -62,16 +62,16 @@ export const Hero: React.FC = () => {
       ))}
 
       <div className="z-10 text-center px-6 animate-fade-in">
-        <div className="mb-6 inline-block px-8 py-2 rounded-full border border-rose-200 text-rose-500 text-xs md:text-sm uppercase tracking-[0.4em] font-bold bg-white/70 backdrop-blur-md shadow-sm">
-          To My Beloved Wife, {WIFE_NAME}
+        <div className="mb-6 inline-block px-6 py-2 rounded-full border border-rose-200 text-rose-500 text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold bg-white/70 backdrop-blur-md shadow-sm">
+          💝 Happy Valentine's Day, {WIFE_NAME} 💝
         </div>
-        <h1 className="font-serif text-6xl md:text-9xl text-[#6D4C41] mb-8 leading-tight drop-shadow-xl">
+        <h1 className="font-serif text-5xl md:text-8xl text-[#6D4C41] mb-6 leading-tight drop-shadow-xl">
           Our Story
         </h1>
-        <p className="font-script text-3xl md:text-5xl text-rose-500 mb-12 max-w-3xl mx-auto italic drop-shadow-md">
+        <p className="font-script text-2xl md:text-4xl text-rose-500 mb-10 max-w-2xl mx-auto italic drop-shadow-md">
           A five-year journey to forever...
         </p>
-        <div className="flex items-center justify-center gap-6 mb-12">
+        <div className="flex items-center justify-center gap-6 mb-10">
           <div className="h-px w-16 bg-rose-200"></div>
           <div className="text-rose-400 text-2xl animate-pulse">❤</div>
           <div className="h-px w-16 bg-rose-200"></div>

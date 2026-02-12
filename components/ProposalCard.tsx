@@ -107,7 +107,7 @@ export const ProposalCard: React.FC<ProposalCardProps> = ({ onAccept }) => {
           <>
             <div className="text-7xl mb-10 animate-pulse drop-shadow-xl">💍</div>
             <h2 className="font-serif text-3xl md:text-5xl text-[#6D4C41] mb-12 px-4 leading-tight italic">
-              Will you be mine — today, tomorrow, and forever?
+              Will you be my Valentine — today, tomorrow, and forever?
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-10 min-h-[140px] relative">

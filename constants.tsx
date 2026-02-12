@@ -17,6 +17,7 @@ export const IMAGE_ASSETS = {
   FIRST_MEETING: "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770916640/first_meeting_wlgaha.jpg?auto=format&fit=crop&q=80&w=800",
   DIGITAL_CONNECTION: "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770916641/photo_2026-02-12_22-14-31_w9poqr.jpg?auto=format&fit=crop&q=80&w=800",
   WEDDING_DAY: "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770916645/photo_2026-02-12_22-14-05_svvvq8.jpg?auto=format&fit=crop&q=80&w=800",
+  ENGAGEMENT: "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770923517/photo_2026-02-13_00-57-12_t6x5lp.jpg?auto=format&fit=crop&q=80&w=800", // TODO: Replace with your engagement photo!
 
   // 13 Reasons
   REASON_1: "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770916643/photo_2026-02-12_22-14-13_esubju.jpg?auto=format&fit=crop&q=80&w=600",
@@ -62,6 +63,13 @@ export const TIMELINE_DATA: TimelineItem[] = [
     description: "Years of growth, endless video calls, and unwavering support. We built a foundation of trust and love that was strong enough to bridge any distance.",
     icon: "🏗️",
     image: IMAGE_ASSETS.DIGITAL_CONNECTION
+  },
+  {
+    year: "July 4, 2025",
+    title: "She Said Yes!",
+    description: "The moment I asked you to be mine forever, and you said yes. Our engagement was the promise of a lifetime — the beginning of our happily ever after.",
+    icon: "💍",
+    image: IMAGE_ASSETS.ENGAGEMENT
   },
   {
     year: "December 5, 2025",

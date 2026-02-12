@@ -1,20 +1,51 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 💝 Our Story — A Valentine's Tribute
 
-# Run and deploy your AI Studio app
+A beautiful, interactive storytelling website built for Dristy, celebrating our journey from the first "Hello" to our "Forever".
 
-This contains everything you need to run your app locally.
+![Project Preview](public/preview.png)
 
-View your app in AI Studio: https://ai.studio/apps/drive/18mFC5QBjbW8sUB9j4cQJKiXzCLmyR36N
+## ✨ Features
 
-## Run Locally
+- **📖 Interactive Timeline**: A scrollable journey through our key milestones (First Date, First Trip, The Proposal).
+- **💌 Love Reasons Cards**: A 3D flip-card gallery sharing "All The Reasons Why" I choose you.
+- **✨ Future Vision**: An interactive section visualizing our dreams together (Rainy days, Festivals, & more).
+- **💍 The Proposal**: A special interactive question section ("Will you be my Valentine?").
+- **🎨 Immersive Design**:
+  - Floating hearts and falling petals animation.
+  - Soft, romantic color palette (Rose & Cream).
+  - Fully responsive mobile-first design.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS + Custom Animations
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Fonts**: Playfair Display (Serif), Dancing Script (Handwritten), Inter (Sans)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/our-story.git
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run locally**:
+    ```bash
+    npm run dev
+    ```
+
+## 🖼️ Personalization
+
+Update `constants.tsx` to customize:
+
+- **TIMELINE_DATA**: Add your own dates and memories.
+- **LOVE_REASONS**: Change the text on the cards.
+- **IMAGES**: Swap the URLs for your own photos.
+
+---
+
+_Made with ❤️ for Valentine's Day 2026_

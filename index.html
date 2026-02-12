@@ -3,8 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Story — And All the Reasons I Choose You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#FFF0F5" />
+    <meta name="description" content="A love letter to Dristy — Our story, our journey, our forever. Happy Valentine's Day 2026." />
+    <title>💝 Our Story — Happy Valentine's Day, Dristy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,6 +102,49 @@
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         box-shadow: 0 25px 50px -12px rgba(255, 182, 193, 0.2);
+      }
+
+      /* Fade In Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      /* Mobile Improvements */
+      @media (max-width: 640px) {
+        .font-serif { letter-spacing: -0.02em; }
+        
+        /* Ensure touch targets are at least 44px */
+        button {
+          min-height: 44px;
+          min-width: 44px;
+        }
+        
+        /* Reduce padding on mobile for more content space */
+        .glass-card {
+          border-radius: 2rem;
+        }
+      }
+
+      /* Smooth scroll for all browsers */
+      html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Safe area insets for notched phones */
+      body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      /* Selection color to match theme */
+      ::selection {
+        background: rgba(251, 113, 133, 0.3);
+        color: #4A3737;
       }
     </style>
   <script type="importmap">
