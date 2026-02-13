@@ -7,6 +7,7 @@ import { LoveReasons } from './components/LoveReasons';
 import { HeartfeltLetter } from './components/HeartfeltLetter';
 import { FutureVision } from './components/FutureVision';
 import { Closing } from './components/Closing';
+import { CustomCursor } from './components/CustomCursor';
 
 
 const App: React.FC = () => {
@@ -22,7 +23,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#FFF9F9]">
+    <main className="relative min-h-screen bg-[#FFF9F9] cursor-none">
+      <CustomCursor />
       <Hero />
       
       <Timeline />

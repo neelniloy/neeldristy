@@ -8,21 +8,17 @@ interface LetterPart {
 }
 
 const LETTER_PARTS: LetterPart[] = [
-  { text: `My Dearest Dristy,`, type: 'header' },
+  { text: `My Dearest Wife ${WIFE_NAME},`, type: 'header' },
   { 
-    text: "As I sit here and reflect on our story, I am moved by how perfectly our souls have aligned. From those first digital 'Hellos' on September 1st, 2020, we took a leap of faith that transformed my entire world.", 
+    text: "From our first 'Hello' in 2020 to the magic of finally meeting in 2021, my world has been transformed by you.", 
     type: 'paragraph' 
   },
   { 
-    text: "I'll never forget the magic of July 16th, 2021—the day the distance finally dissolved and I got to look into your eyes for the very first time. That moment defined my life and made every second of anticipation worthwhile.", 
+    text: "Years of growing together led us to our forever on December 5th, 2025. You are my reality, my home, and my heart.", 
     type: 'paragraph' 
   },
   { 
-    text: "Years of growing together, sharing our deepest dreams through screens and calls, led us to December 5th, 2025. Now, we finally have our forever. You are no longer just a thought or a wish; you are my reality, my home, and my heart.", 
-    type: 'paragraph' 
-  },
-  { 
-    text: "Thank you for choosing me, for staying by me, and for being the most incredible partner. I promise to cherish you, laugh with you, and love you with everything I have for all the days of my life.", 
+    text: "Thank you for choosing me. I promise to cherish and love you with everything I have.", 
     type: 'paragraph' 
   },
   { text: `With all my heart, ${HUSBAND_NAME}`, type: 'signature' }
@@ -57,10 +53,12 @@ export const HeartfeltLetter: React.FC = () => {
 
     if (currentCharIndex < currentFullText.length) {
       const char = currentFullText[currentCharIndex];
-      let delay = 35 + Math.random() * 25;
+      // Even faster base delay
+      let delay = 10 + Math.random() * 10;
       
-      if (char === '.' || char === ',' || char === '—') delay += 200;
-      if (char === ' ') delay -= 5;
+      // Minimal punctuation pauses for "slight fast" effect
+      if (char === '.' || char === ',' || char === '—') delay += 50;
+      if (char === ' ') delay -= 2;
 
       const timer = setTimeout(() => {
         setDisplayedParts(prev => {
@@ -73,10 +71,11 @@ export const HeartfeltLetter: React.FC = () => {
 
       return () => clearTimeout(timer);
     } else {
+      // Faster transition between paragraphs
       const pauseTimer = setTimeout(() => {
         setCurrentPartIndex(prev => prev + 1);
         setCurrentCharIndex(0);
-      }, 800);
+      }, 300);
       return () => clearTimeout(pauseTimer);
     }
   }, [isStarted, currentPartIndex, currentCharIndex]);

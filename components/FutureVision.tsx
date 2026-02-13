@@ -164,7 +164,7 @@ export const FutureVision: React.FC = () => {
       </div>
       
       <p className="mt-8 text-[10px] text-[#BCAAA4] uppercase tracking-[0.4em] opacity-60">
-        AI Generated Visions • Powered by our love in Bangladesh
+        Powered by our love
       </p>
     </div>
   );

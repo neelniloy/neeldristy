@@ -2,8 +2,8 @@
 import { TimelineItem, LoveReason } from './types';
 
 export const WIFE_NAME = "Dristy"; 
-export const FULL_WIFE_NAME = "Mithila Dey Dristy";
-export const HUSBAND_NAME = "Niloy Kumar Sarker";
+export const HUSBAND_NAME = "Niloy";
+export const CURRENT_YEAR = new Date().getFullYear();
 
 /**
  * PHOTO GALLERY:

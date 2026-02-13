@@ -1,6 +1,7 @@
-# 💝 Our Story — A Valentine's Tribute
+# 💝 Our Story — Happy Valentine's Day
 
-A beautiful, interactive storytelling website built for Dristy, celebrating our journey from the first "Hello" to our "Forever".
+A premium, romantic, and editorial-style digital gift for Dristy.
+, celebrating our journey from the first "Hello" to our "Forever".
 
 ![Project Preview](public/preview.png)
 
@@ -27,7 +28,7 @@ A beautiful, interactive storytelling website built for Dristy, celebrating our 
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/our-story.git
+    git clone https://github.com/neelniloy/neeldristy.git
     ```
 2.  **Install dependencies**:
     ```bash

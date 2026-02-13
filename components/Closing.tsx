@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { CURRENT_YEAR } from '../constants';
 
 export const Closing: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const Closing: React.FC = () => {
           <div className="h-px w-12 bg-rose-200"></div>
         </div>
         <p className="font-script text-2xl md:text-3xl text-rose-400 mb-4">
-          Happy Valentine's Day 2026
+          Happy Valentine's Day {CURRENT_YEAR}
         </p>
         <p className="text-[#8D6E63] font-light tracking-wide uppercase text-sm mt-8">
           Forever starts today.

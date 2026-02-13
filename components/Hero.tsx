@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
 
       <div className="z-10 text-center px-6 animate-fade-in">
         <div className="mb-6 inline-block px-6 py-2 rounded-full border border-rose-200 text-rose-500 text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold bg-white/70 backdrop-blur-md shadow-sm">
-          💝 Happy Valentine's Day, {WIFE_NAME} 💝
+          💝 Happy Valentine's Day, My Dear Wife {WIFE_NAME} 💝
         </div>
         <h1 className="font-serif text-5xl md:text-8xl text-[#6D4C41] mb-6 leading-tight drop-shadow-xl">
           Our Story

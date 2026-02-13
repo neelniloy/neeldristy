@@ -1,5 +1,6 @@
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { WIFE_NAME, HUSBAND_NAME } from '../constants';
 
 interface ProposalCardProps {
   onAccept: () => void;
@@ -101,7 +102,7 @@ export const ProposalCard: React.FC<ProposalCardProps> = ({ onAccept }) => {
           <div className="animate-fade-in py-16">
             <div className="text-8xl mb-8 animate-bounce">💖</div>
             <h2 className="font-serif text-5xl text-rose-500 mb-6 italic">I Knew You'd Say Yes!</h2>
-            <p className="text-[#8D6E63] text-xl font-light">Mithila, my life is complete with you...</p>
+            <p className="text-[#8D6E63] text-xl font-light">{WIFE_NAME}, my life is complete with you...</p>
           </div>
         ) : (
           <>
@@ -133,7 +134,7 @@ export const ProposalCard: React.FC<ProposalCardProps> = ({ onAccept }) => {
             </div>
 
             <p className="mt-16 text-[#BCAAA4] text-[11px] uppercase tracking-[0.5em] font-black opacity-40">
-              Niloy Kumar Sarker ❤️ Mithila Dey Dristy
+              {HUSBAND_NAME} ❤️ {WIFE_NAME}
             </p>
           </>
         )}

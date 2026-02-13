@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#FFF0F5" />
-    <meta name="description" content="A love letter to Dristy — Our story, our journey, our forever. Happy Valentine's Day 2026." />
+    <meta name="description" content="A love letter to Dristy — Our story, our journey, our forever. Happy Valentine's Day." />
     <title>💝 Our Story — Happy Valentine's Day, Dristy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,6 +145,18 @@
       ::selection {
         background: rgba(251, 113, 133, 0.3);
         color: #4A3737;
+      }
+      
+      /* Hide default cursor globally */
+      * {
+        cursor: none !important;
+      }
+      
+      /* Re-enable cursor for touch devices if needed, but for now focus on desktop */
+      @media (hover: none) {
+        * {
+          cursor: auto !important;
+        }
       }
     </style>
   <script type="importmap">
