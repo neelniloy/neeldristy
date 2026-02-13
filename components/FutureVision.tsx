@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { GoogleGenAI } from "@google/genai";
-import { WIFE_NAME } from '../constants';
+import { WIFE_NAME, HUSBAND_NAME, COUPLE_SELFIE } from '../constants';
 
 const VIBES = [
   { 
@@ -32,6 +32,25 @@ export const FutureVision: React.FC = () => {
   const [selectedVibe, setSelectedVibe] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const fetchImageAsBase64 = async (url: string): Promise<string> => {
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64String = (reader.result as string).split(',')[1];
+          resolve(base64String);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    } catch (err) {
+      console.error("Error fetching reference image:", err);
+      throw new Error("Could not load reference photo. Check CORS settings or URL.");
+    }
+  };
+
   const generateVisionImage = async (vibe: typeof VIBES[0]) => {
     setLoading(true);
     setSelectedVibe(vibe.label);
@@ -39,14 +58,25 @@ export const FutureVision: React.FC = () => {
     setError(null);
     
     try {
+      // 1. Fetch and convert the selfie to base64
+      const selfieBase64 = await fetchImageAsBase64(COUPLE_SELFIE);
+
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
         model: 'gemini-2.5-flash-image',
         contents: {
           parts: [
             {
-              text: `Generate a beautiful, romantic, and artistic illustration of a happy couple in Bangladesh enjoying ${vibe.prompt}. 
-                     Ensure the attire reflects Bangladeshi culture (Saree and Panjabi). The style should be elegant and heartwarming. No text in the image.`,
+              inlineData: {
+                data: selfieBase64,
+                mimeType: "image/jpeg"
+              }
+            },
+            {
+              text: `Generate a beautiful, romantic, and artistic illustration of the happy couple shown in the provided photo enjoying ${vibe.prompt}. 
+                     IMPORTANT: Maintain the facial features and likeness of both the man and woman from the reference photo extremely accurately.
+                     Ensure their attire reflects Bangladeshi culture (Saree for ${WIFE_NAME} and Panjabi for ${HUSBAND_NAME}). 
+                     The style should be elegant, heartwarming, and artistic. No text in the image.`,
             },
           ],
         },

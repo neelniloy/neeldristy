@@ -4,6 +4,7 @@ import { TimelineItem, LoveReason } from './types';
 export const WIFE_NAME = "Dristy"; 
 export const HUSBAND_NAME = "Niloy";
 export const CURRENT_YEAR = new Date().getFullYear();
+export const COUPLE_SELFIE = "https://res.cloudinary.com/dh0p4xl59/image/upload/v1770974155/photo_2026-02-13_15-15-25_itidol.jpg";
 
 /**
  * PHOTO GALLERY:
