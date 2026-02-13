@@ -3,7 +3,7 @@
 A premium, romantic, and editorial-style digital gift for Dristy.
 , celebrating our journey from the first "Hello" to our "Forever".
 
-![Project Preview](public/preview.png)
+![Project Preview](preview.png)
 
 ## ✨ Features
 
